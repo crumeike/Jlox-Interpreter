@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.craftinginterpreters.lox.Lox;
-
 import static com.craftinginterpreters.lox.TokenType.*; 
 
 class Scanner {
@@ -20,6 +18,7 @@ class Scanner {
   Scanner(String source) {
     this.source = source;
   }
+  
   List<Token> scanTokens() {
     while (!isAtEnd()) {
       // We are at the beginning of the next lexeme.
