@@ -1,6 +1,5 @@
 package com.craftinginterpreters.lox;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.craftinginterpreters.lox.TokenType.*;
@@ -27,12 +26,6 @@ class Parser {
     return equality();
   }
 
-  private Stmt statement() {
-    if (match(PRINT)) return printStatement();
-
-    return expressionStatement();
-  }
-  
   private Expr equality() {
     Expr expr = comparison();
 

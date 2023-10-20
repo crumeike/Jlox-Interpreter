@@ -19,11 +19,6 @@ public class GenerateAst {
       "Unary    : Token operator, Expr right"
     ));
 
-    defineAst(outputDir, "Stmt", Arrays.asList(
-      "Expression : Expr expression",
-      "Print      : Expr expression"
-    ));
-
   }
   private static void defineAst(
       String outputDir, String baseName, List<String> types)
@@ -46,9 +41,9 @@ public class GenerateAst {
       defineType(writer, baseName, className, fields);
     }
 
-        // The base accept() method.
-        writer.println();
-        writer.println("  abstract <R> R accept(Visitor<R> visitor);");
+    // The base accept() method.
+    writer.println();
+    writer.println("  abstract <R> R accept(Visitor<R> visitor);");
     
     writer.println("}");
     writer.close();
